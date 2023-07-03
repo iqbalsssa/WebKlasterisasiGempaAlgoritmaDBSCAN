@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Klastering Gempa dengan Algoritma DBMS</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* CSS styling untuk halaman HTML */
+        body {
+            background-color: #f5f5f5; /* Warna latar belakang body */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff; /* Warna latar belakang kontainer */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan pada kontainer */
+            border-radius: 6px; /* Border radius pada kontainer */
+        }
+
+        h1 {
+            text-align: center; /* Posisi teks judul menjadi rata tengah */
+            color: #333333; /* Warna teks judul */
+            margin-bottom: 20px; /* Margin bawah untuk judul */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Klastering Gempa dengan Algoritma DBMS</h1> <!-- Teks judul halaman -->
+
+        <form method="POST" action="/" enctype="multipart/form-data">
+            <!-- Form untuk mengunggah file -->
+            <div class="file-input">
+                <input type="file" name="file" id="file" accept=".csv" required> <!-- Input untuk memilih file -->
+                <label for="file" class="custom-file-upload">Pilih file</label> <!-- Label untuk tombol memilih file -->
+            </div>
+            <button id="cluster-button" class="custom-button">Kluster</button> <!-- Tombol untuk memulai klastering -->
+        </form>
+
+        {% if data %}
+        <!-- Bagian untuk menampilkan hasil klastering -->
+        <h2>Hasil Klastering</h2> <!-- Teks judul hasil klastering -->
+        <p>Jumlah kluster: {{ n_clusters }}</p> <!-- Jumlah kluster -->
+        <table>
+            <tr>
+                <th>Nomor KK</th>
+                <th>Nama KK</th>
+                <th>Longitudinal</th>
+                <th>Latitude</th>
+                <th>Alamat Asli</th>
+                <th>Kluster</th>
+            </tr>
+            {% for row in data %}
+            <!-- Iterasi untuk setiap baris data -->
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script> <!-- Script JavaScript eksternal -->
+</body>
+</html>

@@ -1,0 +1,69 @@
+.container {
+    text-align: center; /* Mengatur teks rata tengah dalam kontainer */
+    margin-top: 50px; /* Margin atas pada kontainer */
+}
+
+h1 {
+    font-size: 24px; /* Ukuran font judul */
+}
+
+.file-input {
+    margin-bottom: 20px; /* Margin bawah pada input file */
+}
+
+#file {
+    display: none; /* Menyembunyikan input file */
+}
+
+.custom-file-upload {
+    display: inline-block; /* Mengatur tampilan tombol pilih file menjadi inline */
+    padding: 10px 20px; /* Padding pada tombol pilih file */
+    background-color: #007bff; /* Warna latar belakang tombol pilih file */
+    color: #fff; /* Warna teks tombol pilih file */
+    cursor: pointer; /* Mengubah kursor saat di atas tombol pilih file */
+    border-radius: 5px; /* Border radius pada tombol pilih file */
+    border: none; /* Menghapus border tombol pilih file */
+    transition: background-color 0.3s ease; /* Efek transisi saat mengubah warna latar belakang tombol pilih file */
+}
+
+.custom-file-upload:hover {
+    background-color: #0069d9; /* Warna latar belakang tombol pilih file saat dihover */
+}
+
+.custom-button {
+    display: inline-block; /* Mengatur tampilan tombol kluster menjadi inline */
+    padding: 10px 20px; /* Padding pada tombol kluster */
+    background-color: #28a745; /* Warna latar belakang tombol kluster */
+    color: #fff; /* Warna teks tombol kluster */
+    cursor: pointer; /* Mengubah kursor saat di atas tombol kluster */
+    border-radius: 5px; /* Border radius pada tombol kluster */
+    border: none; /* Menghapus border tombol kluster */
+    transition: background-color 0.3s ease; /* Efek transisi saat mengubah warna latar belakang tombol kluster */
+    font-weight: bold; /* Ketebalan font pada tombol kluster */
+}
+
+.custom-button:hover {
+    background-color: #218838; /* Warna latar belakang tombol kluster saat dihover */
+}
+
+table {
+    margin: 20px auto; /* Margin pada tabel untuk pusatkan secara horizontal */
+    border-collapse: collapse; /* Menggabungkan batas sel tabel */
+    width: 80%; /* Lebar tabel */
+}
+
+th, td {
+    padding: 8px; /* Padding pada sel tabel */
+    text-align: left; /* Posisi teks dalam sel tabel menjadi rata kiri */
+    border-bottom: 1px solid #ddd; /* Garis bawah pada setiap baris tabel */
+}
+
+th {
+    background-color: #f2f2f2; /* Warna latar belakang header tabel */
+    font-weight: bold; /* Ketebalan font pada header tabel */
+}
+
+#chart {
+    width: 80%; /* Lebar grafik */
+    margin: 0 auto; /* Margin untuk pusatkan secara horizontal */
+}
